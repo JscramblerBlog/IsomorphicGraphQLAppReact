@@ -1,0 +1,13 @@
+{
+  "name": "isomorphic-graph-ql-app-react",
+  "version": "0.0.1",
+  "description": "Developing An Isomorphic GraphQL App With React",
+  "main": "bin/www",
+  "scripts": {
+    "start": "node bin/www"
+  },
+  "author": {
+    "name": "CR",
+    "email": "reyesc@gmail.com"
+  }
+}
