@@ -1,0 +1,17 @@
+﻿{
+  "1": {
+    "id": 1,
+    "name": "Beer",
+    "count": 3
+  },
+  "2": {
+    "id": 2,
+    "name": "Whiskey",
+    "count": 2
+  },
+  "3": {
+    "id": 3,
+    "name": "Vodka",
+    "count": 3
+  }
+}
