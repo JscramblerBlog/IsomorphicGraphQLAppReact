@@ -33,11 +33,20 @@
   <ItemGroup>
     <Compile Include="app.js" />
     <Compile Include="bin\www" />
+    <Compile Include="engines\engine.js" />
+    <Compile Include="engines\httpHandler.js" />
+    <Compile Include="engines\mustache.js" />
+    <Compile Include="engines\render.js" />
     <Compile Include="graphql\schema.js" />
     <Compile Include="react\form.js" />
     <Compile Include="react\header.js" />
     <Compile Include="react\react.js" />
     <Compile Include="react\tab.js" />
+    <Compile Include="routes\index.js" />
+    <Compile Include="routes\route.js" />
+    <Compile Include="tests\engines\httpHandler.test.js" />
+    <Compile Include="tests\engines\mustache.test.js" />
+    <Compile Include="tests\engines\response.mock.js" />
     <Compile Include="tests\graphql\schema.test.js" />
     <Compile Include="tests\react\react.test.js" />
     <Content Include="graphql\data.json" />
@@ -47,9 +56,12 @@
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="graphql\" />
+    <Folder Include="engines\" />
+    <Folder Include="routes\" />
     <Folder Include="react\" />
     <Folder Include="tests\" />
     <Folder Include="tests\graphql\" />
+    <Folder Include="tests\engines\" />
     <Folder Include="tests\react\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->

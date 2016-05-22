@@ -1,9 +1,8 @@
 ﻿var http = require('http');
+var route = require('./routes/route');
 
 var app = http.createServer(function (req, res) {
-  res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-
-  res.end('Hello, World!');
+  route(req, res);
 });
 
 module.exports = app;
