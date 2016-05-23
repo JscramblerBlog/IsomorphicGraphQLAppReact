@@ -1,5 +1,8 @@
-﻿var engine = require('../engines/engine');
+﻿var graphql = require('graphql');
+var url = require('url');
+var engine = require('../engines/engine');
 var react = require('../react/react');
+var schema = require('../graphql/schema');
 
 var request = {
   path: 'views/index.html',
@@ -7,17 +10,39 @@ var request = {
   nocache: true
 };
 
+var renderEngine = {
+  handler: engine.httpHandler,
+  template: engine.mustache
+};
+
 function getIndex(req, res) {
-  request.data = getData();
+  const queryString = url.parse(req.url, true).query;
+  const drinkQuery = queryString['bar-query'];
 
-  const param = { handler: engine.httpHandler, template: engine.mustache };
-
-  engine.render(request, res, param);
+  if (drinkQuery) {
+    renderWithDrink(res, drinkQuery);
+  } else {
+    renderWithoutDrink(res);
+  }
 }
 
-function getData() {
+function renderWithoutDrink(res) {
+  request.data = getViewData({ });
+
+  engine.render(request, res, renderEngine);
+}
+
+function renderWithDrink(res, query) {
+  graphql.graphql(schema, query).then(function (drink) {
+    request.data = getViewData({ query: query, drink: JSON.stringify(drink) });
+
+    engine.render(request, res, renderEngine);
+  });
+}
+
+function getViewData(data) {
   return {
-    reactComponent: react.render()
+    reactComponent: react.render(data)
   };
 }
 

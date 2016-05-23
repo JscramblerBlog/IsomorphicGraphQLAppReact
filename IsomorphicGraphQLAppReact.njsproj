@@ -38,8 +38,7 @@
     <Compile Include="engines\mustache.js" />
     <Compile Include="engines\render.js" />
     <Compile Include="graphql\schema.js" />
-    <Compile Include="react\form.js" />
-    <Compile Include="react\header.js" />
+    <Compile Include="react\drink.js" />
     <Compile Include="react\react.js" />
     <Compile Include="react\tab.js" />
     <Compile Include="routes\index.js" />
@@ -52,11 +51,13 @@
     <Content Include="graphql\data.json" />
     <Content Include="package.json" />
     <Content Include="readme.md" />
+    <Content Include="views\index.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
     <Folder Include="graphql\" />
     <Folder Include="engines\" />
+    <Folder Include="views\" />
     <Folder Include="routes\" />
     <Folder Include="react\" />
     <Folder Include="tests\" />
