@@ -42,6 +42,7 @@
     <Compile Include="react\drink.js" />
     <Compile Include="react\react.js" />
     <Compile Include="react\tab.js" />
+    <Compile Include="routes\ajax.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\route.js" />
     <Compile Include="routes\script.js" />
