@@ -1,5 +1,5 @@
 ﻿var react = typeof React === 'object' ? React : require('react');
-var drink = typeof drink === 'object' ? drink : require('./drink');
+var drink = typeof drink === 'function' ? drink : require('./drink');
 
 var tab = react.createClass({
   getInitialState: function () {
@@ -20,9 +20,10 @@ var tab = react.createClass({
       react.createElement('input', {
         id: 'bar-query',
         name: 'bar-query',
+        type: 'text',
         autoFocus: true,
         onChange: this.onChange,
-        value: this.state.query
+        value: this.props.query
       }),
       react.createElement('button', null, 'Get'),
       react.createElement(drink, { drink: this.state.drink }));

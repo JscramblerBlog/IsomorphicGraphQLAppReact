@@ -38,11 +38,13 @@
     <Compile Include="engines\mustache.js" />
     <Compile Include="engines\render.js" />
     <Compile Include="graphql\schema.js" />
+    <Compile Include="react\react.dom.js" />
     <Compile Include="react\drink.js" />
     <Compile Include="react\react.js" />
     <Compile Include="react\tab.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\route.js" />
+    <Compile Include="routes\script.js" />
     <Compile Include="tests\engines\httpHandler.test.js" />
     <Compile Include="tests\engines\mustache.test.js" />
     <Compile Include="tests\engines\response.mock.js" />
