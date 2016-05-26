@@ -10,7 +10,6 @@ var tab = react.createClass({
   },
   handleSubmit: function (e) {
     e.preventDefault();
-    var that = this;
 
     const xhr = new XMLHttpRequest();
     xhr.open('GET', `/ajax?bar-query=${this.state.query}`, true);
@@ -19,8 +18,8 @@ var tab = react.createClass({
     xhr.onload = function (eXhr) {
       const xhrResponse = eXhr.target;
 
-      that.setState({ drink: xhrResponse.responseText });
-    };
+      this.setState({ drink: xhrResponse.responseText });
+    }.bind(this);
 
     xhr.send();
   },
